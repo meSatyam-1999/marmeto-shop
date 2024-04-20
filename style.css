@@ -1,0 +1,129 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+/* Product container */
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* Added to evenly distribute items */
+}
+
+/* Individual product item */
+.productItems {
+    width: calc(25% - 20px); /* Adjusted width for desktop */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.productItems:hover {
+    transform: translateY(-5px);
+}
+
+/* Product image */
+.productItems img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Product title */
+.productItems h3 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Product price */
+.productItems h6 {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Add to cart button */
+.productItems button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.productItems button:hover {
+    background-color: grey;
+    color: black;
+}
+
+/* Filter button container */
+.filterbtn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Filter button */
+.filterbtn button {
+    background-color: #fff;
+    color: #000000;
+    border: none;
+    padding: 12px 60px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filterbtn button:hover {
+    background-color: black;
+    color: #fff;
+}
+
+/* Media queries for different screen sizes */
+
+/* Mobile screen up to 767px */
+@media screen and (max-width: 767px) {
+    .productItems {
+        width: 100%; /* Full width on mobile */
+    }
+}
+
+/* Tablet screen 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .productItems {
+        width: calc(50% - 20px); /* 2 columns on tablet */
+    }
+}
+
+/* Desktop screen above 1025px */
+@media screen and (min-width: 1025px) {
+    .productItems {
+        width: calc(25% - 20px); /* 4 columns on desktop */
+    }
+}
